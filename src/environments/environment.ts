@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://lisa-api-stg.azurewebsites.net/'
-  //apiUrl: 'http://localhost:1338/'
+  //apiUrl: 'https://lisa-api-stg.azurewebsites.net/'
+  apiUrl: 'http://localhost:1338/'
 };
 
 /*

@@ -51,5 +51,19 @@ export class ConsumerService {
     return this._requestService.get("v2/events/timeline", params);
   }
 
+  getProfile(id,token){
+
+    //return this._requestService.get('v2/users/'+id+'/profile?access_token='+token);
+
+    return this._requestService.get('v2/users/'+id+'/profile');
+
+
+
+  }
+
+  editProfile(id, data,token) {
+    return this._requestService.put('v2/users/' + id + '/profile/edit?access_token='+token, { 'user': data })
+}
+
 
 }
