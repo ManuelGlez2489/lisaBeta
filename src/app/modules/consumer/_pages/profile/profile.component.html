@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-header bg-white">
+        <i class="fas fa-id-card"></i> 153124
+    </div>
+    <div *ngIf="!isEditing" class="card-body">
+
+        <img class="avatar-image rounded-circle profile-avatar img-fluid"  src="{{session.avatar.url}}" alt="artist_avatar">
+        
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fas fa-user-tag"></i> cfrancod</li>
+            <li class="list-group-item"><i class="fas fa-user"></i>  Cristian Franco </li>
+            <li class="list-group-item"><i class="fas fa-envelope"></i> cfranco@pkglobal.com</li>
+            <li class="list-group-item"><i class="fas fa-phone"></i> 614-213-142-176</li>
+            <li class="list-group-item"><button type="button" (click)="editProfile()" class="btn btn-dark">Edit profile</button></li>
+          </ul>
+        
+        
+        
+    </div>
+
+    <div *ngIf="isEditing" class="card-body">
+
+       
+        <div class="form-group">
+            <form >
+                <div class="form-group"> 
+                    <label for="exampleFormControlFile1">Select new Avatar</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group">
+                    
+                    <input type="text" formControlName="nickname" class="form-control" 
+                        placeholder="Nickname" >
+                </div>
+                <div class="form-group">
+                    <input type="text" formControlName="name" class="form-control" id="inputFName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" formControlName="name" class="form-control" id="inputLName" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" formControlName="phone" class="form-control" id="inputPhone" placeholder="Phone Number">
+                </div>
+ 
+
+                <button type="button" (click)="editProfile()" class="btn btn-dark">Save profile</button>
+                
+               
+            </form>
+        </div>
+        
+ 
+           
+          
+        
+        
+        
+    </div>
+</div>

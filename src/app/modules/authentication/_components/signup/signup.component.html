@@ -1,0 +1,37 @@
+<div class="container-fluid mt-5">
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xl-12">
+                
+                <img class="img-responsive w-25 rounded mx-auto d-block" src="../../../../../assets/main-icon.png" alt="lisa app logo">
+                <br>
+                
+                <h3 class="text-center">Sign Up</h3>
+                <p class="text-center font-weight-lighter text-muted">Enter your details to create your account:</p>
+            
+                <form [formGroup]="signUpForm" (ngSubmit)="signup()"> 
+                    <div class="form-group ">
+                        <input type="email" formControlName="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" formControlName="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" formControlName="confirmPassword" class="form-control" id="inputPassword2" placeholder="Confirm password">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" formControlName="acceptedTOS" class="form-check-input" id="check">
+                        <label class="form-check-label" for="check">I Agree the terms and conditions</label>
+                        
+                    </div>
+                    <br>
+                    <div *ngIf="message">
+                        <app-alert [message]="message" [type]="type" ></app-alert>
+                    </div>
+                    <button class="btn btn-dark btn-block">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,25 @@
+.consumer-main-container{
+    
+    flex: 1;
+    display: flex;
+    z-index: 8;
+    position: relative;
+}
+.consumer-main-container-header{
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    height: calc(100% - 60px);
+    z-index: 14;
+}
+
+.consumer-main-container-body{
+
+
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    z-index: 12;
+    padding: 0 0 0 calc((30px) + 280px);
+    transition: all .2s;
+}

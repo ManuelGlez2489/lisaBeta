@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">    
+
+        <app-loading *ngIf="isLoading" [message]="message"></app-loading>
+
+    </div>
+</div>
+
+<table *ngIf="!isLoading" class="table">
+    <thead>
+      <tr>
+        <th scope="col">Appt id</th>
+        <th scope="col">Service</th>
+        <th scope="col">Started</th>
+        <th scope="col">Ended</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appt of appointments">
+        <th scope="row">{{appt.id}}</th>
+        <td>{{appt.event.services[0].name}} - {{appt.event.services[0].profession_name}}</td>
+        <td>{{appt.scheduled_start}}</td>
+        <td>{{appt.scheduled_end}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,6 @@
+<nav aria-label="breadcrumb bg-transparent">
+  <ol class="breadcrumb  bg-transparent">
+    <li *ngFor="let route of routes; let last = last" class="breadcrumb-item active" aria-current="page"><a
+        href="{{route}}" [ngClass]="{'text-info': last}">{{route}}</a></li>
+  </ol>
+</nav>

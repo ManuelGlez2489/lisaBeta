@@ -1,0 +1,51 @@
+<div class="app-sidebar-wrapper">
+    <div class="sidebar shadow-box">
+        <!--header-->
+        <div class="header">
+            <img class="img-responsive logo-src" src="../../../../../assets/app/media/img/main-icon.png"
+                alt="lisa app logo">
+        </div>
+        <!--content-->
+        <div class="scrollbar-sidebar scrollbar-container">
+            <div class="sidebar-inner">
+                <ul class="vertical-nav-menu">
+                    <li class="sidebar-inner-heading">Menu</li>
+                    <li class="">
+                        <a href="" aria-expanded="false" [routerLink]="['/consumer/home']"
+                            routerLinkActive="sidebar-option-active">
+                            <i class="fas fa-home side-icon"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="" aria-expanded="false" [routerLink]="['/consumer/upcoming-appointments']"
+                            routerLinkActive="sidebar-option-active">
+                            <i class="fas fa-calendar-check side-icon"></i>
+                            Upcoming Appointments
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="" aria-expanded="false">
+                            <i class="fas fa-history side-icon"></i>
+                            Previous Appointments
+                        </a>
+                    </li>
+                    <li class="sidebar-inner-heading">User</li>
+                    <li class="">
+                        <a href="" aria-expanded="false" [routerLink]="['/consumer/profile']"
+                            routerLinkActive="sidebar-option-active">
+                            <i class="fas fa-user side-icon"></i>
+                            Profile
+                        </a>
+                        <a href="" aria-expanded="false" [routerLink]="['/consumer/credit-cards']"
+                            routerLinkActive="sidebar-option-active">
+                            <i class="fas fa-user side-icon"></i>
+                            Credit Cards
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>

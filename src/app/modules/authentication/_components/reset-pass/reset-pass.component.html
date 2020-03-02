@@ -1,0 +1,33 @@
+<div class="container-fluid mt-5">
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xl-12">
+                
+                <img class="img-responsive w-25 rounded mx-auto d-block" src="../../../../../assets/main-icon.png" alt="lisa app logo">
+                <br>
+                
+                <h3 class="text-center">Forgotten Password ?</h3>
+                <p class="text-center font-weight-lighter text-muted">Enter your email to reset your password:</p>
+            
+                <form [formGroup]="signUpForm" (ngSubmit)="recover()">
+                    <div class="form-group ">
+                        <input type="email" formControlName="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div *ngIf="message">
+                        <app-alert [message]="message" [type]="type" ></app-alert>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                            <button class="btn btn-dark btn-block">Request</button>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                            <button class="btn btn-dark btn-block" [routerLink]="['/login']">Cancel</button>
+                        </div>
+                       
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

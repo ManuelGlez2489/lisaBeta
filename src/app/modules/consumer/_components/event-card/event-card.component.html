@@ -1,0 +1,28 @@
+<div class="card event-card border-0 shadow-box">
+    <div class="card-header border-0  event-card-header">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between">
+                <img src="{{event.artist.avatar}}" alt="artist avatar" class="img-thumbnail event-artist-avatar mr-2">
+                <div>
+                    <p class="mb-0">{{event.artist.first_name}} {{event.artist.last_name}}</p>
+                    <small class="mr-3">{{event.artist.nick_name}}</small>
+                </div>
+            </div>
+            <!-- <div>
+                <button class="btn btn-secondary btn-sm rounded-pill">Request</button>
+            </div> -->
+        </div>
+    </div>
+    <div class="card-body text-muted d-flex justify-content-around">
+        <div>
+            <span>{{event.service.name}}</span>
+            <small>{{event.start_date | dateTimeZonePipe}}</small>
+        </div>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-center p-0">
+        <button class="btn btn-primary btn-action text-muted">
+            <i class="far fa-calendar"></i>
+            Request
+        </button>
+    </div>
+</div>
