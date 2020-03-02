@@ -12,7 +12,7 @@ export default class Session implements Deserializable {
         Object.assign(this, input)
         this.token = new Token().deserialize(input.token);
         this.user = new User().deserialize(input.user);
-        this.corporation = new Corporation().deserialize(input.corproation);
+        this.corporation = new Corporation().deserialize(input.corporation);
         this.roles = input.roles.map(e => new Role().deserialize(e));
         return this;
     }

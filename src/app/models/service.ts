@@ -4,5 +4,6 @@ export default class Service {
     id: number;
     name: string;
     duration: number;
-    profession: Profession
+    profession: Profession;
+    total_price: number;
 }

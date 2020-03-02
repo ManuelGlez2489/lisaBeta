@@ -12,8 +12,11 @@ export class dateTimeZonePipe implements PipeTransform {
     this.building = this._localService.getBuilding();
   }
 
-  transform(date): string {
-    return moment.tz(date, this.building.time_zone).format('YYYY-MM-DD HH:mm');
+  transform(date, format?: string): string {
+    if (format)
+      return moment.tz(date, this.building.time_zone).format(format);
+    else
+      return moment.tz(date, this.building.time_zone).format('YYYY-MM-DD HH:mm');
   }
 
 }
