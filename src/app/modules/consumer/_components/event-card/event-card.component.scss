@@ -1,22 +1,11 @@
 @import './../../../../../theme/colors';
 
-.event-card{
-    
-    .event-card-header{
-         background-image: url('./../../../../../assets/app/media/img/baner/blowout/blowout-1.jpg');
-         height: 8rem;
-         width: 100%;
-        // opacity: 0.7;
-         background-repeat: no-repeat;
-         background-size: cover;
-         mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
-        //background-color: rgba($color: $lisa-navy, $alpha: 0.5);
-    }
-    .event-artist-avatar{
-        height: 3rem;
-        width: 3rem;
-    }
-    .btn-action{
-        height: 33px;
+.card-item{
+    width:35rem;
+    margin-bottom: 10px;
+
+    .title{
+        margin-bottom: 0px;
+        line-height: 0.8;
     }
 }

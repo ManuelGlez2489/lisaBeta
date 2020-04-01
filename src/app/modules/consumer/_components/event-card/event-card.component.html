@@ -1,31 +1,28 @@
-<div class="card event-card border-0 shadow-box">
-    <div class="card-header event-card-header d-flex justify-content-between">
-        <span></span>
-        <button class="btn btn-secondary btn-sm rounded-pill btn-action">Request</button>
-    </div>
-    <div class="card-body text-muted">
-        <div class="d-flex justify-content-between">
-            <p>{{event.service.name}} <br> <small>{{event.service.duration}} Minutes</small></p>
-            <span class="badge badge-pill badge-primary h-100">{{event.service.total_price | currency}}</span>
-        </div>
-        <!-- <div class="d-flex justify-content-between">
-
-        </div> -->
-    </div>
-    <div class="card-body text-muted bg-white border-0 d-flex justify-content-between">
-        <small>
-            <i class="far fa-calendar-alt"></i>
-            {{event.start_date | dateTimeZonePipe:'MMM-d'}}
-        </small>
-        <small>
-            <i class="far fa-clock"></i>
-            {{event.start_date | dateTimeZonePipe:'HH:mm A'}}
-        </small>
-    </div>
-    <div class="card-footer text-muted bg-white border-0 d-flex justify-content-start">
-        <img src="{{event.artist.avatar}}" alt="artist avatar" class="rounded event-artist-avatar mr-1">
+<a href="javascript:;" class="list-group-item list-group-item-action p-0 card-item"
+    [routerLink]="['/consumer/event', event.id]">
+    <div class="d-flex justify-content-between">
         <div>
-            <p>{{event.artist.first_name}} {{event.artist.last_name}}</p>
+            <img [src]="img_selected" alt="service" height="120" width="150">
+        </div>
+        <div class="flex-fill pt-2 pb-2 pl-2">
+            <h5 class="title">{{event.service.name}}</h5>
+            <p class="p-0 m-o">
+                <small class="text-muted">{{event.service.profession_name}}</small>
+            </p>
+            <p>{{event.service.total_price | currency}}</p>
+        </div>
+        <div class="flex-fill pt-2 text-right pr-2 text-muted">
+            <p class="p-0 m-0">
+                <small>
+                    {{event.start_date | dateTimeZonePipe:'MMM-d'}}
+                </small>
+            </p>
+            <p class="p-0 m-0">
+                <small>
+                    {{event.start_date | dateTimeZonePipe:'HH:mm A'}} - {{event.end_date | dateTimeZonePipe:'HH:mm A'}}
+                </small>
+            </p>
+
         </div>
     </div>
-</div>
+</a>

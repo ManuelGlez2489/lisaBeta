@@ -11,11 +11,12 @@ import { HomeComponent } from './_pages/home/home.component'
 import { UpcomingApptsComponent } from './_components/upcoming-appts/upcoming-appts.component';
 import { EventsTimelineComponent } from './_components/events-timeline/events-timeline.component';
 import { ProfileComponent } from './_pages/profile/profile.component';
-import { EventCardComponent } from './_components/event-card/event-card.component'
+import { EventCardComponent } from './_components/event-card/event-card.component';
+import { EventInfoComponent } from './_components/event-info/event-info.component'
 
 
 @NgModule({
-  declarations: [InitComponent, ConsumerTopBar, ConsumerSideBarComponent, UpcomingApptsComponent, HomeComponent, EventsTimelineComponent, ProfileComponent, EventCardComponent],
+  declarations: [InitComponent, ConsumerTopBar, ConsumerSideBarComponent, UpcomingApptsComponent, HomeComponent, EventsTimelineComponent, ProfileComponent, EventCardComponent, EventInfoComponent],
   imports: [
     CommonModule,
     ConsumerRoutingModule,

@@ -21,26 +21,6 @@ export class ConsumerService {
     return this._requestService.get(url);
   }
   getTimeLine() {
-
-    // var model: any = params;
-    // model.populate = "categories,services,address,corporation,artists,building_space"
-    // model.start_date = moment().format("YYYY-MM-DDTHH:mm:ss")
-    // model.limited = "true"
-    // model.order_by = "start_date"
-    // model.per_page = 10
-
-    // let currentSession = this._localStorageManager.getSession();
-    // let currentUser = currentSession.user;
-    // let userRoles = currentUser.roles;
-    // if (userRoles) {
-    //   userRoles.forEach(item => {
-    //     if (item.name == "livly user") {
-    //       model.isLivlyUser = true;
-    //     }
-    //   });
-    // }
-    //return this.http.get("/events/timeline", model);
-
     var params = {
       corporation: this.session.corporation.id,
       building: this.session.corporation.building.id,
@@ -49,6 +29,9 @@ export class ConsumerService {
     }
 
     return this._requestService.get("v2/events/timeline", params);
+  }
+  getTakenAppointments(eventId: string) {
+    return this._requestService.get("events/" + eventId + "/appointments");
   }
 
 

@@ -5,20 +5,22 @@ import { InitComponent } from './_pages/init/init.component';
 import { UpcomingApptsComponent } from './_components/upcoming-appts/upcoming-appts.component';
 import { HomeComponent } from './_pages/home/home.component';
 import { ProfileComponent } from './_pages/profile/profile.component';
+import { EventInfoComponent } from './_components/event-info/event-info.component';
 
 
 const routes: Routes = [
   {
     path: '',
     component: InitComponent,
-    data: { title: 'Upcoming Appointments' },
+    data: { title: '' },
     children: [
-      { path: 'home', component: HomeComponent, data: { title: 'Home' } },
+      { path: 'dashboard', component: HomeComponent, data: { title: 'Dashboard' } },
       { path: 'upcoming-appointments', component: UpcomingApptsComponent, data: { title: 'Upcoming Appointments' } },
       { path: 'profile', component: ProfileComponent, data: { title: 'Profile' } },
+      { path: 'event/:id', component: EventInfoComponent, data: { title: 'Event' } },
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
       }
     ]
